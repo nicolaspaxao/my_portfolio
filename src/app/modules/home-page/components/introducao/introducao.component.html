@@ -8,14 +8,13 @@
         <a class="btn btn-see-more">Saiba mais sobre mim</a>
         <a class="btn btn-ccv" (click)="downloadPdf()">Download CCV</a>
       </div>
-
     </div>
     <img class="introducao-image" src="./assets/introducao.svg" alt="Imagem de introducão">
     <div class="introducao-social-medias">
-      <a href="#" title="Github"><i class="fa-brands fa-github"></i></a>
-      <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" title="Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a *ngFor="let socialMedia of socialMediaList" [href]="socialMedia.link" [title]="socialMedia.label"
+        target="_blank">
+        <i [class]="socialMedia.icon"></i>
+      </a>
     </div>
   </div>
 </main>

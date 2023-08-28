@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { socialMediasMock } from './mocks/social-medias';
 
 @Component({
   selector: 'app-introducao',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./introducao.component.scss']
 })
 export class IntroducaoComponent implements OnInit {
+
+  public socialMediaList = socialMediasMock;
 
   ngOnInit(): void { }
 
