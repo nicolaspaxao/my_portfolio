@@ -1,0 +1,22 @@
+<header>
+  <div class="header-container">
+    <div class="header-logo">
+      <img src="../../../assets/logo.svg" alt="">
+    </div>
+    <nav>
+      <ul class="header-nav">
+        <li *ngFor="let navItem of navbarList">
+          <a class="nav-item" href="">{{navItem.placeHolder}}</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="menu-btn" (click)="toggleMenu()"><i class="fa-solid fa-bars"></i></a>
+    <div class="mobile-menu" [class]="isMenuOpen? 'open' : ''">
+      <ul>
+        <li *ngFor="let navItem of navbarList">
+          <a class="nav-item" href="">{{navItem.placeHolder}}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
