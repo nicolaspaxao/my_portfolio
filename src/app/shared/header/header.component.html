@@ -6,7 +6,8 @@
     <nav>
       <ul class="header-nav">
         <li *ngFor="let navItem of navbarList">
-          <a class="nav-item" href="">{{navItem.placeHolder}}</a>
+          <a class="nav-item" [routerLink]="[navItem.routerLink]" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">{{navItem.placeHolder}}</a>
         </li>
       </ul>
     </nav>
@@ -14,7 +15,8 @@
     <div class="mobile-menu" [class]="isMenuOpen? 'open' : ''">
       <ul>
         <li *ngFor="let navItem of navbarList">
-          <a class="nav-item" href="">{{navItem.placeHolder}}</a>
+          <a class="nav-item" [routerLink]="[navItem.routerLink]" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">{{navItem.placeHolder}}</a>
         </li>
       </ul>
     </div>

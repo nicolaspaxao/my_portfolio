@@ -1,0 +1,16 @@
+@import './colors.scss';
+
+.titleLarge {
+  font-size: 3rem;
+  color: $primary-color;
+  transition: all .5s ease;
+  word-wrap: break-word;
+}
+
+.bodyText {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: $primary-color;
+  transition: all .5s ease;
+
+}

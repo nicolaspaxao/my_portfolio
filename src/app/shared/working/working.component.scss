@@ -1,0 +1,39 @@
+:host {
+  img {
+    display: block;
+    max-width: 50%;
+    object-fit: scale-down;
+  }
+
+  p {
+    word-wrap: break-word;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  @media (max-width:800px) {
+    img {
+      max-width: 80%;
+    }
+  }
+
+  @media (max-width:500px) {
+    img {
+      max-width: 100%;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+}

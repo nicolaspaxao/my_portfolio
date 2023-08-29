@@ -1,0 +1,31 @@
+<main class="about">
+  <div class="container">
+    <section class="aboutSection">
+      <h1 class="titleLarge">Sobre</h1>
+      <p class="aboutMe bodyText">Olá, me chamo Nicolas Paxão da Silva 👋
+        Eu sou <strong>Analista Desenvolvedor</strong>, formado em 2022 pela faculdade UNIP e atuando com
+        desenvolvimento
+        de aplicativos <strong>Mobile e Web</strong>, ou melhor dizendo, <strong>Front-end</strong> e, me
+        aventurando
+        com
+        os estudos de
+        <strong>Back-end</strong>. Sou apaixonado em tecnologia, tenho como objetivo
+        atuar em todas as vertentes de um projeto, assim sendo um <strong>Full Stack</strong>.
+      </p>
+    </section>
+    <section class="stackSection">
+      <h2 class="titleLarge stacks">Técnologias</h2>
+      <p class="bodyText stacksSubtitle">
+        As técnologias listas abaixo são as que já tive contato e as que trabalho hoje.
+      </p>
+      <ul class="stackList">
+        <li class="stackItem" *ngFor="let stack of stackList">
+          <img [src]="stack.icon" [alt]="stack.name" width="24px" height="24px">
+          <h6>{{stack.name}}</h6>
+        </li>
+      </ul>
+    </section>
+    <img class="aboutImage" src="./assets/floating.png" alt="">
+
+  </div>
+</main>

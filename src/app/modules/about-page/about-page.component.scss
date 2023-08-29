@@ -1,0 +1,112 @@
+@import '../../../utils/colors.scss';
+
+:host {
+  $width: 429px;
+  $height: 633px;
+
+  .about {
+    width: 100%;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .container {
+    display: grid;
+    position: relative;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 250px 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    padding: 0 10px 0 10px;
+    margin: 0 auto;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .aboutContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aboutMe {
+    margin-bottom: 20px;
+
+  }
+
+  .aboutSection {
+    grid-row: 1;
+    order: 0;
+  }
+
+  .aboutImage {
+    max-height: 35rem;
+    object-fit: cover;
+    grid-row: 1;
+    order: 3;
+  }
+
+  .stacks {
+    margin-bottom: 10px;
+  }
+
+  .stacksSubtitle {
+    margin-bottom: 20px;
+  }
+
+  .stackList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    justify-content: flex-start;
+    align-content: flex-start;
+    row-gap: 20px;
+    column-gap: 10px;
+  }
+
+  .stackItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    img {
+      width: 3rem;
+      height: 3rem;
+      fill: $primary-color;
+      color: $primary-color;
+    }
+
+    h6 {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .stackSection {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .aboutImage {
+      display: none;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .stackList {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      justify-content: flex-start;
+    }
+  }
+}

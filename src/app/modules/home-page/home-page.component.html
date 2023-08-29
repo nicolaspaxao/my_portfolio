@@ -1,2 +1,20 @@
-<app-header></app-header>
-<app-introducao></app-introducao>
+<main class="introducao">
+  <div class="introducao-container">
+    <div class="introducao-conteudo">
+      <p>Hello, World! 🖖</p>
+      <h1>Desenvolvedor</h1>
+      <p>Sejam bem vindos ao meu portifólio website.</p>
+      <div class="btn-section">
+        <a class="btn btn-see-more" routerLink="about">Saiba mais sobre mim</a>
+        <a class="btn btn-ccv" (click)="downloadPdf()">Download CCV</a>
+      </div>
+    </div>
+    <img class="introducao-image" src="./assets/working.png" alt="Imagem de introducão">
+    <div class="introducao-social-medias">
+      <a *ngFor="let socialMedia of socialMediaList" [href]="socialMedia.link" [title]="socialMedia.label"
+        target="_blank">
+        <i [class]="socialMedia.icon"></i>
+      </a>
+    </div>
+  </div>
+</main>
